@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-size: 28px;
+    background-color: #000000;
+    color: #00ff40;
+    width: 100vw;
+    height: 100vh;
+    position: static;
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+.main-wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    width: 85vw;
+    height: 65vh;
+    gap: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid green;
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px); 
+}
+
+.show {
+    align-items: center;
+}
+
+.effects {
+    display: flex;
+    gap: 8px;
+    margin: 10px;
+}
+
+.effect {
+    width: 8px;
+    height: 8px;
+    background: rgb(139, 255, 61);
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+.effect:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.effect:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    width: fit-content;
+}
+
+.grant {
+    position: fixed;
+    width: 100vw;
+}
+
+@media screen and (max-width: 768px) {
+
+    *{
+        font-size: 12px;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: #00ff40;
+        font-family: Verdana, sans-serif;
+        font-size: 28px;
+    }
+    .main {
+        flex-direction: column;
+        height: auto;
+        width: 85vw;
+    }
+    video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+    }
+}
